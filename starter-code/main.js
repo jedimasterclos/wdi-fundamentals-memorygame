@@ -3,13 +3,13 @@ var cardTwo = 'queen';
 var cardThree = 'king';
 var cardFour = 'king';
 
-if (cardOne === cardTwo) {
-		alert('Scored a match!');
-}	else {
-	alert('Please try again');
-}
-if (cardThree === cardFour) {
-		alert('Scored a match!');
-}	else {
-	alert('Please try again');
+
+var board = document.getElementById('game-board');
+
+function createBoard() {
+	for (var i=0; i<cards.length; i++) {
+		var cardElement = document.createElement('div');
+		cardElement.className = 'card';
+		board.appendChild(cardElement);
+	}
 }
